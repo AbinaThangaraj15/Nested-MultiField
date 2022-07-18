@@ -1,0 +1,15 @@
+
+Component With Nested multifield<br>
+<sly data-sly-use.compObj="${'com.selvi.core.models.ComponentWithNestedMultifield'}">
+    Title:${compObj.getTitle} <br>
+    Authors: <br>
+    <sly data-sly-list.authorItem="${compObj.getAuthors}">
+        Author Name: ${authorItem.getAuthorname} <br>
+        Book Information: <br>
+        <sly data-sly-list.bookItem="${compObj.getBooks}">
+            Book Name: ${bookItem.getBookname} <br>
+            Book Desc: ${bookItem.getBookdesc} <br>
+        </sly>
+    </sly>
+</sly>
+
